@@ -1,0 +1,51 @@
+@{
+    ViewData["Title"] = "Dojos Page";
+}
+<a href="ninjas" class="link">Back to ninjas</a>
+<div class="list">
+  <h3> All Dojos </h3>
+  <div class="ninjas">
+      <table class="things">
+          <thead>
+              <th>Dojo Name</th>
+          </thead>
+          <tbody>
+          @{
+              foreach (var dojo in ViewBag.dojos){
+                  if(@dojo.Id != 1){
+                    <tr><td><a href="dojos/@dojo.Id">@dojo.Name </a></td></tr>
+                  }
+              }
+          }
+
+          </tbody>
+      </table>
+  </div>
+</div>
+
+@model DojoLeague.Models.Dojo
+
+<div class="register">
+    <h3>Register a Dojo!</h3>
+    <form asp-action="addDojo" asp-controller="Dojo" method="post">
+        <table>
+            <tr>
+                <td>Dojo Name:</td>
+                <td><input asp-for="Name"></td>
+                <td><span asp-validation-for="Name"></span></td>
+            </tr>
+            <tr>
+                <td>Dojo Location:</td>
+                <td><input asp-for="Location"></td>
+                <td><span asp-validation-for="Location"></span></td>
+            </tr>
+            <tr>
+                <td>Additional Dojo Info:</td>
+                <td><input asp-for="Description"></td>
+                <td><span asp-validation-for="Description"></span></td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Add Dojo" class="add_butt">
+    </form>
+</div>

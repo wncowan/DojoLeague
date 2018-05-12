@@ -1,0 +1,77 @@
+@{
+    ViewData["Title"] = "Ninjas Page";
+}
+<a href="dojos" class="link">Back to dojos</a>
+<div class="list">
+  <h3> Registered Ninjas </h3>
+  <div class="ninjas">
+      <table class="things">
+          <thead>
+              <th>Ninja Name</th>
+              <th>Home Dojo</th>
+          </thead>
+          <tbody>
+            @{
+                foreach (var ninja in ViewBag.ninjas){
+                    <tr>
+                        <td><a href="ninjas/@ninja.Id">@ninja.Name </a></td>
+                        <td>
+                        @if(@ninja.Dojo.Id == 1){
+                            @ninja.Dojo.Name;
+                        } 
+                        else {
+                            <a href="dojos/@ninja.Dojo.Id"> @ninja.Dojo.Name </a>;
+                        }
+                        </td>
+                    </tr>
+                }
+            }
+
+          </tbody>
+      </table>
+  </div>
+</div>
+
+@model DojoLeague.Models.Ninja
+
+<div class="register">
+    <h3>Register a Ninja!</h3>
+    <form asp-action="addNinja" asp-controller="Ninja">
+    <table>
+        <tr>
+            <td>Ninja Name:</td>
+            <td><input asp-for="Name"></td>
+            <td><span asp-validation-for="Name"></span></td>
+        </tr>
+        <tr>
+            <td>Ninjaing Level(1-10):</td>
+            <td><select asp-for="Level">
+                @{
+                    for(int i=1; i<11;i++){
+                        <option value="@i">@i</option>
+                    }
+                }
+                </select>
+                <td><span asp-validation-for="Level"></span></td>                
+            </td>
+        </tr>
+        <tr>
+            <td>Assigned Dojo:</td>
+            <td><select type="number" name="dojo_id">
+                @{
+                    foreach (var dojo in ViewBag.dojos){
+                        <option value="@dojo.Id" >@dojo.Name</option>
+                    }
+                }
+                </select></td>
+                <td><span asp-validation-for="Dojo"></span></td>
+        </tr>
+        <tr>
+            <td>Additional Dojo Info:</td>
+            <td><input asp-for="Description"></td>
+            <td><span asp-validation-for="Description"></span></td>
+        </tr>
+    </table>
+    <input type="submit" value="Add Ninja" class="add_butt">
+    </form>
+</div>

@@ -1,0 +1,11 @@
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/bin/Debug/netcoreapp2.0/DojoLeague.deps.json
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/bin/Debug/netcoreapp2.0/DojoLeague.runtimeconfig.json
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/bin/Debug/netcoreapp2.0/DojoLeague.runtimeconfig.dev.json
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/bin/Debug/netcoreapp2.0/DojoLeague.dll
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/bin/Debug/netcoreapp2.0/DojoLeague.pdb
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.csprojResolveAssemblyReference.cache
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.csproj.CoreCompileInputs.cache
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.AssemblyInfoInputs.cache
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.AssemblyInfo.cs
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.dll
+/Users/wesleycowan/Desktop/DojoAssignments/netCore/DojoLeague/obj/Debug/netcoreapp2.0/DojoLeague.pdb
